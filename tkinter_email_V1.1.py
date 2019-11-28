@@ -113,7 +113,7 @@ class Application(Frame):
         if self.to.get() == "" or self.subject.get() == "" or self.message.get("1.0",END) == "":
             messagebox.showinfo("内容不能为空", "收件人，标题以及邮件内容")
         else:
-            sender = '18754900508@163.com'
+            sender = '【发件人邮箱】'
             receiver = self.to.get()
 
             # 主题
@@ -125,9 +125,9 @@ class Application(Frame):
             # 服务器地址
             smtpserver = 'smtp.163.com'
             # 用户名（不是邮箱）
-            username = '你的用户名'
+            username = '【你的用户名】'
             # 163授权码
-            password = '你的163授权码'
+            password = '【你的163授权码】'
             message_all = MIMEMultipart()
             message_all['Subject'] = Header(subject, 'utf-8')
             message_all['From'] = sender
