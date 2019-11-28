@@ -120,15 +120,14 @@ class Application(Frame):
             """**主题如果是纯中文或纯英文则字符数必须大于等于5个，
             不然会报错554 SPM被认为是垃圾邮件或者病毒** """
             subject = self.subject.get()
-            contents = '哈喽，世界！'
             # 文章
             body = self.message.get("0.0", END)
             # 服务器地址
             smtpserver = 'smtp.163.com'
             # 用户名（不是邮箱）
-            username = '18754900508'
+            username = '你的用户名'
             # 163授权码
-            password = 'Hz2231841'
+            password = '你的163授权码'
             message_all = MIMEMultipart()
             message_all['Subject'] = Header(subject, 'utf-8')
             message_all['From'] = sender
