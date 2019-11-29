@@ -7,9 +7,6 @@ import smtplib
 from tkinter import filedialog
 from tkinter import messagebox
 
-from astropy.convolution.tests.test_convolve_kernels import width
-
-
 class Application(Frame):
     """Build the basic window frame template"""
 
