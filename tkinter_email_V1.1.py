@@ -155,6 +155,6 @@ if __name__ == "__main__":
     attach_list = []
     root = Tk()
     root.title('快速邮件')
-    root.geometry('500x500')
+    root.geometry('500x550')
     app = Application(root)
     app.mainloop()
