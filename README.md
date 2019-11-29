@@ -18,6 +18,7 @@ pip3 install email
 ### 使用
 
 ```
+# 将代码中的用户名等信息改成自己的用户信息
 # 直接运行即可
 python3 tkinter_emailVx.py
 ```
