@@ -87,9 +87,10 @@ class Application(Frame):
     def openfile(self):
         print('opening')
         filename = filedialog.askopenfilename(title='选择txt文件', filetypes=[('Text', '*.txt')])
-        file = open(filename, 'r')
-        text = file.read()
-        self.message.insert(END, text)
+        if type(filename) != type(()) and filename != '':
+            file = open(filename, 'r')
+            text = file.read()
+            self.message.insert(END, text)
     
     def showhelp(self):
         print('showing')
@@ -118,8 +119,11 @@ class Application(Frame):
             receiver = self.to.get()
 
             # 主题
-            """**主题如果是纯中文或纯英文则字符数必须大于等于5个，
-            不然会报错554 SPM被认为是垃圾邮件或者病毒** """
+            """
+            主题如果是纯中文或纯英文则字符数必须大于等于5个，
+            不然会报错554 SPM被认为是垃圾邮件或者病毒,
+            详情请看企业退信说明。
+            """
             subject = self.subject.get()
             # 文章
             body = self.message.get("0.0", END)
