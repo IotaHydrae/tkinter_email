@@ -97,9 +97,12 @@ class Application(Frame):
     def add_attach(self):
         print('adding')
         abs_filename = filedialog.askopenfilename(title='选择文件', filetypes=[('All Files', '*')])
-        if abs_filename != '':
+        try:
             temp = abs_filename.split("/")
             filename = temp[len(temp)-1:]
+        except:
+            pass
+        if type(abs_filename) != type(()) and abs_filename != '':
             self.label_attachments.insert(END, filename)
             attach_list.append(abs_filename)
 
